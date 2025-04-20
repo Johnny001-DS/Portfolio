@@ -32,8 +32,8 @@ export const experiences: Experience[] = [
     {
       id: 2,
       company: "Polygence",
-      logo: "/api/placeholder/80/80",
-      position: "Student Developer",
+      logo: "/polygence_logo.png",
+      position: "AI Research Assistant",
       period: "2023 - Present",
       location: "AI Researcher",
       description: "Assist in maintaining university web applications. Create documentation and provide technical support for campus digital services.",
@@ -62,6 +62,35 @@ export const experiences: Experience[] = [
       company: "Lastgateway Enterprises",
       logo: "/api/placeholder/80/80",
       position: "Founder",
+      period: "2015 - Present",
+      location: "Farmingdale, NJ",
+      description: "Design and develop websites for small businesses and organizations. Focus on responsive design and accessibility.",
+      details: {
+        responsibilities: [
+          "Designed and developed custom websites for diverse clients",
+          "Implemented responsive designs that work across all device sizes",
+          "Ensured accessibility compliance for all web projects",
+          "Managed client relationships and project timelines",
+          "Provided ongoing maintenance and support for completed sites"
+        ],
+        technologies: ["HTML/CSS", "JavaScript", "React", "Next.js", "WordPress"],
+        achievements: [
+          "Delivered over 10 successful projects with 100% client satisfaction",
+          "Improved site performance scores by an average of 40%",
+          "Developed a streamlined workflow for rapid prototyping and deployment"
+        ],
+        projects: [
+          "Local Restaurant Chain - E-commerce and online ordering system",
+          "Non-profit Organization - Donation platform with event management",
+          "Photography Studio - Portfolio showcase with booking functionality"
+        ]
+      }
+    },
+    {
+      id: 4,
+      company: "AWS Skills Center",
+      logo: "/api/placeholder/80/80",
+      position: "Student",
       period: "2015 - Present",
       location: "Farmingdale, NJ",
       description: "Design and develop websites for small businesses and organizations. Focus on responsive design and accessibility.",
