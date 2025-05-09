@@ -22,9 +22,9 @@ const Hero: React.FC = () => {
           <div className="text-center md:text-left md:flex md:items-center md:justify-between relative">
             <div className="md:w-1/2 mb-12 md:mb-0">
               <div className="relative">
-                <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium mb-5 animate-bounce">
-                  Full-Stack Developer
-                </span>
+                {/* <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium mb-5">
+                  Full-Stack Software Engineer
+                </span> */}
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
                   <span className="block">Hi, I'm</span>
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
@@ -32,11 +32,12 @@ const Hero: React.FC = () => {
                   </span>
                 </h1>
                 <h2 className="mt-4 text-xl md:text-2xl text-gray-600 dark:text-gray-300">
-                  Building digital experiences with code and creativity
+                  Building efficient solutions with code and creativity
                 </h2>
                 <p className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-                  I craft elegant solutions to complex problems using modern web technologies.
-                  My passion lies in creating intuitive user experiences and scalable architectures.
+                  Computer Science student at Northeastern University with experience in full-stack
+                  development, DevSecOps, and cloud computing. Passionate about creating intuitive and
+                  scalable applications.
                 </p>
                 
                 <div className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
@@ -50,7 +51,7 @@ const Hero: React.FC = () => {
                     href="#contact"
                     className="px-8 py-4 bg-white dark:bg-gray-800 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
                   >
-                    Get In Touch
+                    Download Resume
                   </a>
                 </div>
               </div>

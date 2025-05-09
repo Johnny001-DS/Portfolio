@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActivePage }) => {
                   JK
                 </div>
                 <span className="ml-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-                  James<span className="text-gray-800 dark:text-white">.dev</span>
+                  James <span className="text-gray-800 dark:text-white">Khadan</span>
                 </span>
               </div>
             </a>
@@ -61,6 +61,12 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActivePage }) => {
                   active={activeSection === "about"} 
                   onClick={() => scrollToSection("about")}
                   href="#about"
+                />
+                <NavItem 
+                  text="Skills" 
+                  active={activeSection === "skills"} 
+                  onClick={() => scrollToSection("skills")}
+                  href="#skills"
                 />
                 <NavItem 
                   text="Projects" 
@@ -106,6 +112,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActivePage }) => {
             <ul className="pt-2 pb-3 space-y-1 px-4">
               <NavItem text="Home" active={activeSection === "home"} onClick={() => scrollToSection("home")} href="#home" />
               <NavItem text="About" active={activeSection === "about"} onClick={() => scrollToSection("about")} href="#about" />
+              <NavItem text="Skills" active={activeSection === "skills"} onClick={() => scrollToSection("skills")} href="#skills" />
               <NavItem text="Projects" active={activeSection === "projects"} onClick={() => scrollToSection("projects")} href="#projects" />
               <NavItem text="Experience" active={activeSection === "experience"} onClick={() => scrollToSection("experience")} href="#experience" />
               <NavItem text="Contact" active={activeSection === "contact"} onClick={() => scrollToSection("contact")} href="#contact" />

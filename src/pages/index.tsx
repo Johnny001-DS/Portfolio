@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Hero from '@/components/home/Hero';
 import About from '@/components/home/About';
+import Skills from '@/components/home/Skills'; // Import the new Skills component
 import ProjectsSection from '@/components/home/ProjectsSection';
 import ExperienceSection from '@/components/home/ExperienceSection';
 import Contact from '@/components/home/Contact';
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
     const handleScroll = () => {
       if (activePage !== 'home') return;
       
-      const sections = ["home", "about", "projects", "experience", "contact"];
+      const sections = ["home", "about", "skills", "projects", "experience", "contact"];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -86,6 +87,7 @@ const Home: NextPage = () => {
             <main>
               <Hero />
               <About />
+              <Skills /> {/* Add the Skills component here */}
               <ProjectsSection 
                 onProjectSelect={setSelectedProject} 
                 setActivePage={setActivePage}
