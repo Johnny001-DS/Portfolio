@@ -1,5 +1,6 @@
 import { ArrowDownCircle } from "lucide-react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const Hero: React.FC = () => {
     const scrollToAbout = () => {
@@ -8,10 +9,58 @@ const Hero: React.FC = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     };
+    
+    // Phrases to cycle through
+    const phrases = [
+      "Full-Stack Software Engineer",
+      "Cloud Infrastructure Specialist",
+      "Site Reliability Engineer",
+      "Tech Entrepreneur",
+      "Automation & Efficiency Engineer",
+      "Embedded Systems Developer",
+      "AI & Machine Learning Researcher",
+      "Deployment & CI/CD Specialist",
+      "Data Engineer"
+    ];
+
+    const [displayText, setDisplayText] = useState("");
+    const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [isBlinkingCursor, setIsBlinkingCursor] = useState(true);
+
+    useEffect(() => {
+      const currentPhrase = phrases[currentPhraseIndex];
+      
+      const timeout = setTimeout(() => {
+        if (!isDeleting) {
+          setDisplayText(currentPhrase.substring(0, displayText.length + 1));
+          
+          if (displayText.length === currentPhrase.length) {
+            setTimeout(() => setIsDeleting(true), 1500);
+          }
+        } else {
+          setDisplayText(currentPhrase.substring(0, displayText.length - 1));
+          
+          if (displayText.length === 0) {
+            setIsDeleting(false);
+            setCurrentPhraseIndex((currentPhraseIndex + 1) % phrases.length);
+          }
+        }
+      }, isDeleting ? 50 : 100);
+      
+      return () => clearTimeout(timeout);
+    }, [displayText, currentPhraseIndex, isDeleting]);
+
+    useEffect(() => {
+      const cursorInterval = setInterval(() => {
+        setIsBlinkingCursor(prev => !prev);
+      }, 500);
+      
+      return () => clearInterval(cursorInterval);
+    }, []);
   
     return (
       <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        {/* Background elements */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-20 right-1/4 w-64 h-64 rounded-full bg-blue-500 opacity-10 blur-3xl"></div>
           <div className="absolute bottom-20 left-1/4 w-80 h-80 rounded-full bg-purple-500 opacity-10 blur-3xl"></div>
@@ -22,21 +71,23 @@ const Hero: React.FC = () => {
           <div className="text-center md:text-left md:flex md:items-center md:justify-between relative">
             <div className="md:w-1/2 mb-12 md:mb-0">
               <div className="relative">
-                {/* <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium mb-5">
-                  Full-Stack Software Engineer
-                </span> */}
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
                   <span className="block">Hi, I'm</span>
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                     James Khadan
                   </span>
                 </h1>
-                <h2 className="mt-4 text-xl md:text-2xl text-gray-600 dark:text-gray-300">
-                  Building efficient solutions with code and creativity
-                </h2>
+                
+                {/* Typewriter effect replacing static h2 */}
+                <div className="mt-4 min-h-[2rem] md:min-h-[2.5rem]">
+                  <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 inline">
+                    {displayText}
+                    <span className={`${isBlinkingCursor ? 'opacity-100' : 'opacity-0'} transition-opacity ml-1`}>|</span>
+                  </h2>
+                </div>
+                
                 <p className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-                  Computer Science student at Northeastern University with experience in full-stack
-                  development, DevSecOps, and cloud computing. Passionate about creating intuitive and
+                  Computer Science student at Northeastern University currently working as a full-stack engineer. I'm passionate about creating intuitive and
                   scalable applications.
                 </p>
                 
@@ -48,7 +99,9 @@ const Hero: React.FC = () => {
                     View My Work
                   </a>
                   <a 
-                    href="#contact"
+                    href="/JamesKhadanResume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="px-8 py-4 bg-white dark:bg-gray-800 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
                   >
                     Download Resume

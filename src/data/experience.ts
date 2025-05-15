@@ -1,58 +1,74 @@
 import { Experience } from "@/types/index";
 
 export const experiences: Experience[] = [
-    {
-      id: 1,
-      company: "Sponsor for Educational Opportunity Program",
-      logo: "/seo_logo.png",
-      position: "Tech Developer",
-      period: "June 2025 - August 2025",
-      location: "Boston, MA",
-      description: "Developing software to streamline Jira tickets, onboarding workflows, and CI/CD pipelines to increase efficiency for company's backend processes.",
-      details: {
-        responsibilities: [
-          "Developing software to streamline Jira tickets and workflow automation",
-          "Implementing CI/CD pipelines for improved development efficiency",
-          "Creating onboarding workflows to streamline employee integration",
-          "Collaborating with DevOps and Security teams to maintain best practices",
-          "Building internal tools and automations for enterprise-level applications"
+  {
+      "id": 1,
+      "company": "MFS Investment Management",
+      "logo": "/mfs_logo.png",
+      "position": "Full-Stack Software Engineer",
+      "period": "January 2025 - Present",
+      "location": "Boston, MA",
+      "description": "Building internal tools and full-stack applications to support global compliance, reporting, and operational workflows at scale.",
+      "details": {
+        "responsibilities": [
+          "Developing full-stack web applications and internal tools to streamline global compliance, reporting processes, and improve operational efficiency.",
+          "Integrating and deploying internal Large Language Models (LLMs) to enhance employee productivity through natural language interfaces.",
+          "Creating and managing CI/CD pipelines with Red Hat OpenShift to enable scalable deployment environments.",
+          "Automating regulatory data parsing, report generation, and email dissemination, significantly reducing manual compliance tasks.",
+          "Implementing secure certificate management systems across international server infrastructure, utilizing encryption standards like Fernet.",
+          "Conducting technical interviews and mentoring incoming DevSecOps co-op team members."
         ],
-        technologies: ["Python", "React", "TypeScript", "Ansible", "OpenShift", "Azure", "Jenkins", "CI/CD"],
-        achievements: [
-          "Increased efficiency in backend processes through automation",
-          "Streamlined ticket management and workflow systems",
-          "Improved developer productivity through optimized CI/CD pipelines"
+        "technologies": [
+          "Python",
+          "TypeScript",
+          "React",
+          "Red Hat OpenShift",
+          "Kubernetes",
+          "Ansible",
+          "SonarQube",
+          "Azure DevOps",
+          "Google Gemma 3 (LLM)",
+          "PostgreSQL",
+          "Prometheus",
+          "Coralogix",
+          "Atlassian Suite (Jira, Bitbucket)",
+          "Auth.js",
+          "CyberArk"
+        ],
+        "achievements": [
+          "Saving over 100+ hours monthly for the compliance team by developing a high-visibility web portal—originally scoped for 6 engineers over 6 months with a $500K budget—now actively used and gaining adoption and recognition from CTO, CEO, and Chief Compliance Officer",
+          "Reduced resource onboarding time from days to seconds company-wide by developing an online portal, significantly enhancing operational efficiency.",
+          "Designed and deployed a telemetry-based reporting portal that improved metric visibility and traceability across departments.",
+          "Implemented automated regulatory compliance tools that eliminated monthly manual outreach efforts, enhancing accuracy and timeliness of compliance processes.",
+          "Successfully deployed internal lightweight LLM assistant leveraging Google's Gemma 3 on Kubernetes pods (CPU-only), facilitating efficient natural language queries across internal data sources.",
+          "Facilitated scalable and reliable deployment pipelines on Red Hat OpenShift, establishing best practices for broader internal software adoption.",
+          "Mentoring and training incoming co-op, enhancing team productivity and knowledge sharing",
         ]
       }
     },
     {
       id: 2,
-      company: "MFS Investment Management",
-      logo: "/mfs_logo.png",
-      position: "Full-Stack Software Engineer",
-      period: "January 2025 - Present",
-      location: "Boston, MA",
-      description: "Developing software to streamline Jira tickets, onboarding workflows, and CI/CD pipelines to increase efficiency for company's backend processes.",
+      company: "Sponsor for Educational Opportunity Program",
+      logo: "/seo_logo.png",
+      position: "Tech Developer",
+      period: "June 2025 - August 2025",
+      location: "Online",
+      description: "Technical and interpersonal skills, training, and mentoring to build a strong foundation for a career in software development.",
       details: {
         responsibilities: [
-          "Developing software to streamline Jira tickets and workflow automation",
-          "Implementing CI/CD pipelines for improved development efficiency",
-          "Creating onboarding workflows to streamline employee integration",
-          "Collaborating with DevOps and Security teams to maintain best practices",
-          "Building internal tools and automations for enterprise-level applications"
+          "Will work with other fellow developers to learn more about full-stack development and the latest technologies.",
+          "Will recieve mentorship from experienced developers and recruiters to help with job search and interview preparation.",
         ],
-        technologies: ["Python", "React", "TypeScript", "Ansible", "OpenShift", "Azure", "Jenkins", "CI/CD"],
+        technologies: ["TBD"],
         achievements: [
-          "Increased efficiency in backend processes through automation",
-          "Streamlined ticket management and workflow systems",
-          "Improved developer productivity through optimized CI/CD pipelines"
+          "TBD"
         ]
       }
     },
     {
       id: 3,
       company: "Lastgateway Enterprise",
-      logo: "/api/placeholder/80/80",
+      logo: "/lastgateway_logo.png",
       position: "Founder",
       period: "January 2015 - Present",
       location: "Howell, NJ",
@@ -75,7 +91,7 @@ export const experiences: Experience[] = [
       }
     },
     {
-      id: 3,
+      id: 4,
       company: "AWS Skills Center",
       logo: "/aws_logo.jpg",
       position: "AWS Academy Student",
@@ -102,7 +118,7 @@ export const experiences: Experience[] = [
       } 
     },
     {
-      id: 4,
+      id: 5,
       company: "Polygence",
       logo: "/polygence_logo.png",
       position: "AI Research Assistant",

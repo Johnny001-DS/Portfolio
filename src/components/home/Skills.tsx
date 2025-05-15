@@ -1,107 +1,21 @@
 import React, { useState } from 'react';
-import { Layout, Server, Code, Book, GraduationCap, Database, Terminal, Cloud, Users, Globe } from 'lucide-react';
+import { Layout, GraduationCap, Terminal, Cloud } from 'lucide-react';
 import SkillCategory from '@/components/ui/SkillCategory';
 import ClubCard from '@/components/clubs/ClubCard';
 import ClubDetails from '@/components/clubs/ClubDetails';
+import CourseDetails from '@/components/courses/CourseDetails';
+import { clubs } from '@/data/skills';
+import { relevantCourses } from '@/data/skills';
 
 const Skills: React.FC = () => {
     const languages = ["Python", "Java", "C#", "C++", "Rust", "SQL", "TypeScript", "JavaScript"];
     const frameworks = ["RESTful", "React", "Next.js", "NumPy", "Pandas", "PyTorch"];
-    const tools = ["Git", "Docker", "AWS", "Linux", "Ansible", "RedHat OpenShift", "Azure", "Jenkins"];
+    const tools = ["Git", "Kubernetes", "Docker", "AWS", "Linux", "Ansible", "RedHat OpenShift", "Azure", "Jenkins"];
     
-    const relevantCourses = [
-      "Computer Systems (Graduate)",
-      "Algorithms (Graduate)",
-      "Discrete Structures",
-      "Mathematics of Data Models",
-      "Object-Oriented Design",
-      "Introduction to Databases",
-      "Programming in C++",
-      "Projects in Cloud Computing",
-      "Game Programming",
-      "Foundations of Cybersecurity",
-      "Theory of Computation"
-    ];
-
-    // Club involvement
-    const clubs = [
-      {
-        name: "Oasis",
-        role: "Team Member & Mentor",
-        period: "September 2024 - Present",
-        location: "Boston, MA",
-        description: "Collaborated with 4 software engineers to develop a website that consolidates reviews and information on the over 200+ global opportunities a part of Northeastern's Global Campus Network.",
-        image: "/oasis_banner.png",
-        details: {
-          activities: [
-            "Collaborated on developing the website architecture",
-            "Designed and implemented the user interface",
-            "Created database schemas for storing global opportunity data",
-            "Developed API endpoints for data retrieval",
-            "Performed quality assurance testing",
-            "Contributed to documentation and user guides"
-          ],
-          skills: [
-            "Web Development",
-            "Team Collaboration",
-            "UI/UX Design",
-            "Database Design",
-            "API Development",
-            "Project Management"
-          ],
-          achievements: [
-            "Successfully launched a comprehensive resource for students",
-            "Implemented a user-friendly interface for accessing information on 200+ global opportunities",
-            "Developed effective teamwork and communication skills"
-          ],
-          gallery: [
-            "/oasis_headshot.JPEG",
-            "/api/placeholder/600/400",
-            "/api/placeholder/600/400"
-          ]
-        }
-      },
-      {
-        name: "ColorStack",
-        role: "Team Member",
-        period: "September 2024 - Present",
-        location: "Boston, MA",
-        description: "Engaging with over 1500+ other Latinx and Black computer science students across the ColorStack network to gain a better understanding of how a diverse and inclusive professional environment operates.",
-        image: "/colorstackneu.jpg",
-        details: {
-          activities: [
-            "Participating in diversity and inclusion initiatives",
-            "Attending networking events and workshops",
-            "Contributing to mentorship programs",
-            "Collaborating on technical projects with diverse teams",
-            "Engaging in professional development activities",
-            "Supporting community outreach efforts"
-          ],
-          skills: [
-            "Diversity & Inclusion",
-            "Networking",
-            "Leadership",
-            "Community Building",
-            "Cross-cultural Communication",
-            "Mentorship"
-          ],
-          achievements: [
-            "Built connections with 1500+ computer science students from diverse backgrounds",
-            "Enhanced understanding of inclusive professional environments",
-            "Contributed to creating a more diverse tech community"
-          ],
-          testimonial: {
-            text: "Your active participation and insights have been invaluable to our community. You've demonstrated a genuine commitment to fostering diversity in tech.",
-            author: "ColorStack Community Lead"
-          },
-          gallery: [
-            "/colorstack_gallery_1.jpeg",
-          ]
-        }
-      }
-    ];
+    
 
     const [selectedClub, setSelectedClub] = useState<any>(null);
+    const [selectedCourse, setSelectedCourse] = useState<any>(null);
 
     return (
         <section id="skills" className="py-24 bg-white dark:bg-gray-900">
@@ -148,11 +62,15 @@ const Skills: React.FC = () => {
                   
                   <ul className="space-y-3">
                     {relevantCourses.map((course, index) => (
-                      <li key={index} className="flex items-center bg-blue-50 dark:bg-gray-700 p-3 rounded-lg">
+                      <li 
+                        key={index} 
+                        className="flex items-center bg-blue-50 dark:bg-gray-700 p-3 rounded-lg cursor-pointer hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors"
+                        onClick={() => setSelectedCourse(course)}
+                      >
                         <span className="w-6 h-6 flex items-center justify-center bg-blue-600 text-white rounded-full mr-3 text-xs font-bold">
                           {index + 1}
                         </span>
-                        <span className="text-gray-800 dark:text-gray-200 font-medium">{course}</span>
+                        <span className="text-gray-800 dark:text-gray-200 font-medium">{course.title}</span>
                       </li>
                     ))}
                   </ul>
@@ -189,6 +107,13 @@ const Skills: React.FC = () => {
               <ClubDetails 
                 club={selectedClub} 
                 onClose={() => setSelectedClub(null)} 
+              />
+            )}
+
+            {selectedCourse && (
+              <CourseDetails
+                course={selectedCourse}
+                onClose={() => setSelectedCourse(null)}
               />
             )}
         </div>

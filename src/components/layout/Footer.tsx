@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
                   James <span className="text-blue-400">Khadan</span>
                 </span>
               </div>
-              <p className="mt-2 text-gray-400 max-w-md">
-                Building digital experiences with modern web technologies.
-                Available for freelance work and collaborations.
-              </p>
+                <p className="mt-2 text-gray-400 max-w-md">
+                Passionate about building impactful software solutions.<br />
+                Let's connect and create something amazing together!
+                </p>
             </div>
             
             <div className="space-y-4 md:space-y-0 md:flex md:space-x-8">
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
               <p>© {new Date().getFullYear()} James Khadan</p>
               <span className="mx-2">•</span>
               <p className="flex items-center">
-                Made with <Heart size={14} className="mx-1 text-red-500" /> and modern web tech
+                By James Khadan
               </p>
             </div>
           </div>
