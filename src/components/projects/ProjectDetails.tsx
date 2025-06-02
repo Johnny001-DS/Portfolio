@@ -1,11 +1,32 @@
 import { useState } from 'react';
 import { ProjectDetailsProps } from "@/types";
-import { X, ExternalLink, Github } from 'lucide-react';
+import { X, ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onClose }) => {
     const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'gallery'>('overview');
+    const [enlargedImage, setEnlargedImage] = useState<string | null>(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
     
     if (!project) return null;
+    
+    const navigateImage = (direction: 'prev' | 'next') => {
+        if (!project?.details?.gallery) return;
+        
+        const totalImages = project.details.gallery.length;
+        let newIndex;
+        if (direction === 'prev') {
+            newIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+        } else {
+            newIndex = (currentImageIndex + 1) % totalImages;
+        }
+        setCurrentImageIndex(newIndex);
+        setEnlargedImage(project.details.gallery[newIndex]);
+    };
+    
+    const openEnlargedImage = (image: string, index: number) => {
+        setCurrentImageIndex(index);
+        setEnlargedImage(image);
+    };
     
     return (
       <div className="fixed inset-0 z-50 overflow-y-auto">
@@ -72,16 +93,18 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onClose }) => 
                 >
                   Features
                 </button>
-                <button
-                  onClick={() => setActiveTab('gallery')}
-                  className={`px-3 py-4 text-sm font-medium border-b-2 ${
-                    activeTab === 'gallery'
-                      ? 'border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
-                  }`}
-                >
-                  Gallery
-                </button>
+                {project?.details?.gallery && project.details.gallery.length > 0 && (
+                  <button
+                    onClick={() => setActiveTab('gallery')}
+                    className={`px-3 py-4 text-sm font-medium border-b-2 ${
+                      activeTab === 'gallery'
+                        ? 'border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400'
+                        : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+                    }`}
+                  >
+                    Gallery
+                  </button>
+                )}
               </nav>
             </div>
             
@@ -116,13 +139,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onClose }) => 
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition-colors flex items-center"
-                    >
-                      Live Demo <ExternalLink size={16} className="ml-2" />
-                    </a>
-                    <a 
-                      href="#" 
-                      className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-md shadow-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center"
+                      className="px-4 py-2 bg-blue-100 dark:bg-blue-800 text-gray-800 dark:text-gray-200 rounded-md shadow-md hover:bg-blue-200 dark:hover:bg-blue-700 transition-colors flex items-center"
                     >
                       Source Code <Github size={16} className="ml-2" />
                     </a>
@@ -151,11 +168,11 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onClose }) => 
                   <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Project Gallery</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {project.details.gallery.map((image, index) => (
-                      <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer" onClick={() => openEnlargedImage(image, index)}>
                         <img 
                           src={image} 
                           alt={`${project.title} screenshot ${index + 1}`} 
-                          className="w-full h-48 object-cover"
+                          className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                     ))}
@@ -165,6 +182,61 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onClose }) => 
             </div>
           </div>
         </div>
+        
+        {/* Enlarged Image Modal */}
+        {enlargedImage && (
+          <div className="fixed inset-0 z-60 flex items-center justify-center bg-black bg-opacity-90" onClick={() => setEnlargedImage(null)}>
+            <div className="relative w-full h-full flex items-center justify-center p-8">
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setEnlargedImage(null);
+                }}
+                className="absolute top-4 right-4 p-3 text-white hover:text-gray-300 rounded-full bg-black/70 hover:bg-black/80 transition-colors z-10"
+              >
+                <X size={28} />
+              </button>
+              
+              {/* Navigation Arrows */}
+              {project?.details?.gallery && project.details.gallery.length > 1 && (
+                <>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigateImage('prev');
+                    }}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 text-white hover:text-gray-300 rounded-full bg-black/70 hover:bg-black/80 transition-colors z-10"
+                  >
+                    <ChevronLeft size={28} />
+                  </button>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigateImage('next');
+                    }}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 text-white hover:text-gray-300 rounded-full bg-black/70 hover:bg-black/80 transition-colors z-10"
+                  >
+                    <ChevronRight size={28} />
+                  </button>
+                </>
+              )}
+              
+              <img 
+                src={enlargedImage} 
+                alt="Enlarged view" 
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+              
+              {/* Image Counter */}
+              {project?.details?.gallery && project.details.gallery.length > 1 && (
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-black/70 text-white rounded-full text-sm">
+                  {currentImageIndex + 1} / {project.details.gallery.length}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     );
 };

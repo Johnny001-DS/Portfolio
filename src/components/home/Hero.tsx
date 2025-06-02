@@ -13,12 +13,10 @@ const Hero: React.FC = () => {
     // Phrases to cycle through
     const phrases = [
       "Full-Stack Software Engineer",
-      "Cloud Infrastructure Specialist",
-      "Site Reliability Engineer",
+      "Cloud Infrastructure Engineer",
       "Tech Entrepreneur",
       "Automation & Efficiency Engineer",
-      "Embedded Systems Developer",
-      "AI & Machine Learning Researcher",
+      "AI & Machine Learning Developer",
       "Deployment & CI/CD Specialist",
       "Data Engineer"
     ];
@@ -99,7 +97,7 @@ const Hero: React.FC = () => {
                     View My Work
                   </a>
                   <a 
-                    href="/JamesKhadanResume.pdf"
+                    href="/app/files/JamesKhadanResume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-white dark:bg-gray-800 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
@@ -118,7 +116,7 @@ const Hero: React.FC = () => {
                 
                 <div className="relative w-64 h-64 md:w-80 md:h-80 bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform rotate-3 hover:rotate-0 transition-all duration-500">
                   <Image 
-                  src="/Headshot.jpg"
+                  src="/app/images/misc/Headshot.jpg"
                   alt="James Khadan" 
                   layout="fill"
                   objectFit="cover"

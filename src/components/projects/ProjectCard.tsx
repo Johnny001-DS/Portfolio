@@ -1,5 +1,6 @@
 import { ProjectCardProps } from "@/types";
 import { ArrowRight } from "lucide-react";
+import { getTechIcon } from "../projects/IconCard";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) => (
     <div 
@@ -8,11 +9,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) => (
     >
       <div className="absolute inset-0 bg-gradient-to-b from-blue-600/0 to-blue-600/70 dark:to-blue-900/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
       
-      <img 
-        src={project.image} 
-        alt={project.title} 
-        className="w-full h-48 object-cover object-center"
-      />
+      {/* Technology Icons Section */}
+      <div className="h-48 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center p-8">
+        <div className="grid grid-cols-3 gap-6 max-w-xs">
+          {project.icons.slice(0, 6).map((icon, index) => (
+            <div key={index} className="flex flex-col items-center space-y-2 group-hover:scale-110 transition-transform duration-300">
+              {getTechIcon(icon, 24)}
+              <span className="text-xs text-gray-600 dark:text-gray-400 text-center font-medium max-w-16 truncate">
+                {icon}
+              </span>
+            </div>
+          ))}
+          {project.icons.length > 6 && (
+            <div className="flex flex-col items-center space-y-2">
+              <div className="w-6 h-6 bg-gray-300 dark:bg-gray-600 rounded-full text-xs flex items-center justify-center font-medium text-gray-700 dark:text-gray-300">
+                +{project.icons.length - 6}
+              </div>
+              <span className="text-xs text-gray-600 dark:text-gray-400 text-center font-medium">
+                more
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
       
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">

@@ -1,17 +1,38 @@
 import { AllProjectsCardProps } from '@/types/index';
 import { ExternalLink, ArrowRight } from 'lucide-react';
+import { getTechIcon } from '../projects/IconCard';
 
 const AllProjectsCard: React.FC<AllProjectsCardProps> = ({ project, onSelect }) => (
     <div 
       className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
       onClick={() => onSelect(project)}
     >
-      <div className="relative h-48 overflow-hidden">
-        <img 
-          src={project.image} 
-          alt={project.title} 
-          className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-        />
+      <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800">
+        {/* Technology Icons Grid */}
+        <div className="h-full flex items-center justify-center p-6">
+          <div className="grid grid-cols-3 gap-4 max-w-xs">
+            {project.icons.slice(0, 6).map((icon, index) => (
+              <div key={index} className="flex flex-col items-center space-y-1 group-hover:scale-110 transition-transform duration-300">
+                {getTechIcon(icon, 20)}
+                <span className="text-xs text-gray-600 dark:text-gray-400 text-center font-medium max-w-14 truncate">
+                  {icon}
+                </span>
+              </div>
+            ))}
+            {project.icons.length > 6 && (
+              <div className="flex flex-col items-center space-y-1">
+                <div className="w-5 h-5 bg-gray-300 dark:bg-gray-600 rounded-full text-xs flex items-center justify-center font-medium text-gray-700 dark:text-gray-300">
+                  +{project.icons.length - 6}
+                </div>
+                <span className="text-xs text-gray-600 dark:text-gray-400 text-center font-medium">
+                  more
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+        
+        {/* Overlay with category and external link */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
           <div className="p-4 w-full">
             <div className="flex justify-between items-center">

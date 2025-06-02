@@ -8,7 +8,7 @@ import { clubs } from '@/data/skills';
 import { relevantCourses } from '@/data/skills';
 
 const Skills: React.FC = () => {
-    const languages = ["Python", "Java", "C#", "C++", "Rust", "SQL", "TypeScript", "JavaScript"];
+    const languages = ["Python", "TypeScript", "Java", "C#", "C++", "C", "Rust", "SQL"];
     const frameworks = ["RESTful", "React", "Next.js", "NumPy", "Pandas", "PyTorch"];
     const tools = ["Git", "Kubernetes", "Docker", "AWS", "Linux", "Ansible", "RedHat OpenShift", "Azure", "Jenkins"];
     
@@ -88,7 +88,7 @@ const Skills: React.FC = () => {
                 </h3>
                 <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-2"></div>
                 <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-4">
-                  Engaging with student organizations to build skills and contribute to the community
+                  I'm actively engaging with student organizations to build skills and contribute to the community
                 </p>
               </div>
               

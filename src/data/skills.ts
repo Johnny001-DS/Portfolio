@@ -1,3 +1,5 @@
+const imgRoot = "/app/images/extracirriculars"
+
 export const relevantCourses = [
   {
     title: "Computer Systems (Graduate)",
@@ -64,7 +66,7 @@ export const clubs = [
     period: "September 2024 - Present",
     location: "Boston, MA",
     description: "Collaborated with 4 software engineers to develop a website that consolidates reviews and information on the over 200+ global opportunities a part of Northeastern's Global Campus Network. Mentoring new members on the team and helping them learn the ropes of full-stack development.",
-    image: "/oasis_banner.png",
+    image: `${imgRoot}/oasis/oasis_banner.png`,
     details: {
       activities: [
         "Collaborated on developing the website architecture",
@@ -86,7 +88,7 @@ export const clubs = [
         "Developed effective teamwork and communication skills"
       ],
       gallery: [
-        "/oasis_headshot.JPEG"
+        `${imgRoot}/oasis/oasis_headshot.JPEG`
       ]
     }
   },
@@ -96,7 +98,7 @@ export const clubs = [
     period: "September 2024 - Present",
     location: "Boston, MA",
     description: "Engaging with over 1500+ other computer science students from underrepresented backgrounds across the ColorStack network to gain a better understanding of how a diverse and inclusive professional environment operates.",
-    image: "/colorstackneu.jpg",
+    image: `${imgRoot}/colorstack/colorstack_banner.jpg`,
     details: {
       activities: [
         "Participating in diversity and inclusion initiatives",
@@ -116,7 +118,7 @@ export const clubs = [
         "Contributed to creating a more diverse tech community"
       ],
       gallery: [
-        "/colorstack_gallery_1.jpeg",
+        `${imgRoot}/colorstack/colorstack_gallery_1.jpeg`,
       ]
     }
   }
