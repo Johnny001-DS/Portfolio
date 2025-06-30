@@ -51,9 +51,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onClose }) => 
             <div className="relative h-56 sm:h-64 overflow-hidden">
               <div className="w-full h-full object-cover bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-white/90 text-4xl font-medium tracking-wide">
-                    {project.title}
-                  </div>
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
