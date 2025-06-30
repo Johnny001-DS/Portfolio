@@ -3,9 +3,9 @@
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This portfolio showcases my journey as a Computer Science student at Northeastern University and my experience as a full-stack software engineer.
 
 [![Deploy to GitHub Pages](https://github.com/jkhadan/jkhadan.github.io/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/jkhadan/jkhadan.github.io/actions/workflows/deploy.yml)
-![Next.js](https://img.shields.io/badge/Next.js-13+-black)
+![Next.js](https://img.shields.io/badge/Next.js-14+-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3+-38B2AC)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4+-38B2AC)
 
 ## 🌟 Features
 
