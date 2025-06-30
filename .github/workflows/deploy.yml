@@ -4,6 +4,17 @@ on:
   push:
     branches: [ main ]
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,24 +23,41 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        
     - name: Setup pnpm
       uses: pnpm/action-setup@v2
       with:
         version: 8
         
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'pnpm'
+        
     - name: Install dependencies
-      run: pnpm install
+      run: pnpm install --frozen-lockfile
       
     - name: Build
       run: pnpm run build
+      
+    - name: Check build output
+      run: |
+        echo "Checking if out directory exists..."
+        ls -la
+        if [ -d "out" ]; then
+          echo "✅ out directory exists"
+          echo "Contents of out directory:"
+          ls -la out/
+        else
+          echo "❌ out directory does not exist"
+          echo "Available directories:"
+          find . -maxdepth 2 -type d
+          exit 1
+        fi
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
+        cname: jkhadan.github.io

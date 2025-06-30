@@ -1,40 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# James Khadan - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This portfolio showcases my journey as a Computer Science student at Northeastern University and my experience as a full-stack software engineer.
 
-First, run the development server:
+[![Deploy to GitHub Pages](https://github.com/jkhadan/jkhadan.github.io/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/jkhadan/jkhadan.github.io/actions/workflows/deploy.yml)
+![Next.js](https://img.shields.io/badge/Next.js-13+-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3+-38B2AC)
+
+## 🌟 Features
+
+### Core Functionality
+- **Responsive Design** - Perfect display across all devices and screen sizes
+- **Dark/Light Theme** - Seamless theme switching with system preference detection
+- **Smooth Animations** - Engaging micro-interactions and page transitions
+- **Interactive Components** - Dynamic project and experience detail modals
+- **Optimized Performance** - Fast loading times and efficient rendering
+
+### Sections
+- **Hero** - Dynamic typewriter effect showcasing multiple roles
+- **About** - Personal introduction and educational background
+- **Skills & Education** - Technical skills, coursework, and club involvement
+- **Projects** - Featured projects with detailed modal views and image galleries
+- **Experience** - Professional timeline with comprehensive details
+- **Contact** - Multiple contact methods and social links
+
+### Advanced Features
+- **Project Gallery** - Image navigation with enlarged view modal
+- **Experience Timeline** - Interactive timeline with detailed cards
+- **Club Details** - Comprehensive club involvement with achievements
+- **Course Information** - Detailed coursework with skills learned
+- **Mobile Navigation** - Collapsible mobile menu with smooth animations
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Next.js 13+** - React framework with App Router
+- **React 18** - Modern React with hooks and functional components
+- **TypeScript** - Type-safe development
+- **Tailwind CSS 4** - Utility-first CSS framework
+
+### Libraries & Tools
+- **next-themes** - Theme switching functionality
+- **Lucide React** - Beautiful icon library
+- **React Icons** - Additional icon sets (Di*, Si*, etc.)
+- **Framer Motion** - Smooth animations and transitions
+
+### Development
+- **ESLint** - Code linting and formatting
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixes
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/jkhadan/portfolio-website.git
+   cd portfolio-website
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
 
 ```bash
-npm run dev
+npm run build
+npm start
+
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+yarn build
+yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+├── components/              # React components
+│   ├── clubs/              # Club-related components
+│   ├── courses/            # Course detail components
+│   ├── experience/         # Experience components
+│   ├── home/               # Home page sections
+│   ├── layout/             # Layout components (Header, Footer)
+│   ├── projects/           # Project components
+│   └── ui/                 # Reusable UI components
+├── data/                   # Static data files
+│   ├── experience.ts       # Professional experience data
+│   ├── projects.ts         # Project portfolio data
+│   └── skills.ts           # Skills and education data
+├── pages/                  # Next.js pages
+├── styles/                 # Global styles
+├── theme/                  # Theme provider configuration
+└── types/                  # TypeScript type definitions
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 📱 Mobile Optimization
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+The website includes:
+- Responsive grid layouts
+- Mobile-specific navigation
+- Touch-friendly interactive elements
+- Accessible mobile experience
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ♿ Accessibility Features
 
-## Learn More
+- Semantic HTML structure
+- ARIA labels and roles
+- Keyboard navigation support
+- Color contrast compliance
+- Screen reader optimization
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Performance Optimizations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- Lazy loading components
+- Minimal JavaScript bundles
+- CSS purging with Tailwind
+- Optimized font loading
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📞 Contact
 
-## Deploy on Vercel
+- **Email**: [jameskhadan@gmail.com](mailto:jameskhadan@gmail.com)
+- **LinkedIn**: [linkedin.com/in/jameskhadan](https://linkedin.com/in/jameskhadan)
+- **GitHub**: [github.com/jkhadan](https://github.com/jkhadan)
+- **Portfolio**: [jkhadan.github.io](https://jkhadan.github.io)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Built with ❤️ by James Khadan using Next.js and TypeScript.
