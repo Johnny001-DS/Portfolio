@@ -11,7 +11,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ setActivePage, onProjectSelec
     const [activeFilter, setActiveFilter] = useState<string>('All');
     const { theme } = useTheme();
     
-    const filters = ['All', 'Web Application', 'Mobile App', 'Web Design', 'Data Visualization'];
+    const filters = ['All', 'Web Application', 'IT', 'Game Development'];
     
     const filteredProjects = allProjects.filter(project => {
       const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 

@@ -6,6 +6,28 @@ export const experiences: Experience[] =
 [
   {
     id: 1,
+    company: "Sponsor for Educational Opportunity Program",
+    logo: imgRoot + "seo_logo.png",
+    position: "Tech Developer",
+    period: "June 2025 - August 2025",
+    location: "New York - Online",
+    description: "Technical and interpersonal skills, training, and mentoring to build a strong foundation for a career in software development.",
+    details: {
+      responsibilities: [
+        "Participating in professional development workshops to enhance technical and interpersonal skills.",
+        "Receiving 1:1 mentorship from experienced industry professionals",
+        "Engaging with other members in the SEO community",
+        "Gaining software development skills by working in SCRUM-like teams to design, test, and implement full-stack applications",
+
+      ],
+      technologies: ["Python", "Bash", "Git", "GitHub", "RESTful APIs", "SQL", "HTML", "CSS", "JavaScript", "Object-Relational Mappers", "SQLAlchemy", "Pandas", "Ansible", "Terraform"],
+      achievements: [
+        "Completing 300+ hours of rigorous computer science and software engineering training focused on data structures, algorithms, and full-stack web development."
+      ]
+    }
+  },
+  {
+    id: 2,
     company: "MFS Investment Management",
     logo: imgRoot + "mfs_logo.png",
     position: "Full-Stack Software Engineer",
@@ -15,11 +37,11 @@ export const experiences: Experience[] =
     details: {
       responsibilities: [
         "Developing full-stack web applications and internal tools to streamline global compliance, reporting processes, and improve operational efficiency.",
-        "Integrating and deploying internal Large Language Models (LLMs) to enhance employee productivity through natural language interfaces.",
+        "Integrating and deploying internal Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) techniques to enhance employee productivity and data aggregation through natural language interfaces.",
         "Creating and managing CI/CD pipelines with Red Hat OpenShift to enable scalable deployment environments.",
         "Automating regulatory data parsing, report generation, and email dissemination, significantly reducing manual compliance tasks.",
         "Implementing secure certificate management systems across international server infrastructure, utilizing encryption standards like Fernet.",
-        "Conducting technical interviews and mentoring incoming DevSecOps co-op team members."
+        "Conducting technical interviews and mentoring incoming DevSecOps team members."
       ],
       technologies: [
         "Python",
@@ -29,6 +51,7 @@ export const experiences: Experience[] =
         "Kubernetes",
         "Ansible",
         "SonarQube",
+        "Azure",
         "Azure DevOps",
         "Google Gemma 3 (LLM)",
         "PostgreSQL",
@@ -36,35 +59,17 @@ export const experiences: Experience[] =
         "Coralogix",
         "Atlassian Suite (Jira, Bitbucket)",
         "Auth.js",
-        "CyberArk"
+        "CyberArk",
+        "RESTful APIs"
       ],
       achievements: [
-        "Saving over 100+ hours monthly for the compliance team by developing a high-visibility web portal—originally scoped for 6 engineers over 6 months with a $500K budget—now actively used and gaining adoption and recognition from CTO, CEO, and Chief Compliance Officer",
-        "Reduced resource onboarding time from days to seconds company-wide by developing an online portal, significantly enhancing operational efficiency.",
+        "Saving over 100+ hours monthly for the compliance team by developing a web portal—originally scoped for 6 engineers over 6 months with a $500K budget—now actively used and demoed to the CTO, CEO, and LCERM (Legal, Compliance, Enterprise Risk Management)",
+        "Reduced resource onboarding time from weeks to seconds and significantly enhanced operational efficiency company-wide by developing a self-service onboarding portal.",
         "Designed and deployed a telemetry-based reporting portal that improved metric visibility and traceability across departments.",
         "Implemented automated regulatory compliance tools that eliminated monthly manual outreach efforts, enhancing accuracy and timeliness of compliance processes.",
-        "Successfully deployed internal lightweight LLM assistant leveraging Google's Gemma 3 on Kubernetes pods (CPU-only), facilitating efficient natural language queries across internal data sources.",
+        "Successfully deployed internal lightweight LLM assistants leveraging the OpenAI API and Azure AI Search to facilitate efficient natural language queries across internal data sources.",
         "Facilitated scalable and reliable deployment pipelines on Red Hat OpenShift, establishing best practices for broader internal software adoption.",
         "Mentoring and training incoming co-op, enhancing team productivity and knowledge sharing",
-      ]
-    }
-  },
-  {
-    id: 2,
-    company: "Sponsor for Educational Opportunity Program",
-    logo: imgRoot + "seo_logo.png",
-    position: "Tech Developer",
-    period: "June 2025 - August 2025",
-    location: "Online",
-    description: "Technical and interpersonal skills, training, and mentoring to build a strong foundation for a career in software development.",
-    details: {
-      responsibilities: [
-        "Will work with other fellow developers to learn more about full-stack development and the latest technologies.",
-        "Will recieve mentorship from experienced developers and recruiters to help with job search and interview preparation.",
-      ],
-      technologies: ["TBD"],
-      achievements: [
-        "TBD"
       ]
     }
   },

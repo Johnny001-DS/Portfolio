@@ -7,7 +7,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Lastgateway Enterprise Platform",
     description: "A platform providing computing resources and software services to organizations at significantly reduced costs compared to traditional cloud providers.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["Linux", "Docker", "Cloud", "Networking", "SaaS", "PaaS"],
     icons: ["Linux", "Docker", "Cloud", "Networking"],
     category: "IT",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     id: 2,
     title: "CodeCoach",
     description: "A code tutoring website with AI coaching features that provides personalized learning experiences for programming students.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["C#", "ASP.NET", "React", "TypeScript", "PostgreSQL", "Docker", "OpenAI API"],
     icons: ["C#", "ASP.NET", "React", "TypeScript", "PostgreSQL", "Docker"],
     category: "Web Application",
@@ -48,14 +48,14 @@ export const projects: Project[] = [
         "Progress tracking and performance analytics"
       ],
       results: "The platform successfully supports multiple programming languages, encompassing over 80% of programmer workflows, and provides personalized guidance to increase engagement and learning effectiveness.",
-      gallery: ["/api/placeholder/600/400", "/api/placeholder/600/400", "/api/placeholder/600/400"]
+      gallery: []
     }
   },
   {
     id: 3,
     title: "School Bot 2.0",
     description: "An interactive chat bot that helps students navigate school block schedules, providing automated reminders and schedule information.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["Python", "PyTorch", "NLP", "Chatbot", "Machine Learning"],
     icons: ["Python", "PyTorch", "Discord"],
     category: "Web Application",
@@ -83,7 +83,7 @@ export const allProjects: Project[] = [
     id: 4,
     title: "Northeastern Global Campus Explorer",
     description: "A comprehensive web platform aggregating reviews and information about Northeastern University's global campus opportunities.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["Web Development", "Database Design", "UI/UX", "Content Management"],
     icons: ["React", "TypeScript", "Next.js", "Supabase", "Selenium", "Beautiful Soup"],
     category: "Web Application",
@@ -99,14 +99,14 @@ export const allProjects: Project[] = [
         "Program comparison tools"
       ],
       results: "Successfully delivered a valuable resource for Northeastern students considering global opportunities, improving information accessibility and program transparency.",
-      gallery: ["/api/placeholder/600/400", "/api/placeholder/600/400", "/api/placeholder/600/400"]
+      gallery: []
     }
   },
   {
     id: 5,
     title: "John Guy Saves the Galaxy",
     description: "A 3D space shooter game created in Unity3D, featuring custom shaders and C# scripting.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["Unity", "Game Development", "C#"],
     icons: ["Unity", "C#"],
     category: "Game Development",
@@ -122,18 +122,14 @@ export const allProjects: Project[] = [
         "Course project collaboration and documentation"
       ],
       results: "Successfully delivered a polished, playable game demonstrating understanding of graphics programming, Unity engine, and collaborative development.",
-      gallery: [
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400"
-      ]
+      gallery: []
     }
   },
   {
     id: 6,
     title: "Dodge Fall",
     description: "A simple 2D Unity game demonstration designed to teach the fundamentals of Unity and collaborative development to the game design club. Players must avoid incoming objects while teams learn about Unity, GitHub, and working together.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["Unity", "C#", "Game Development", "2D", "Agile"],
     icons: ["Unity", "C#", "Git"],
     category: "Game Development",
@@ -149,18 +145,14 @@ export const allProjects: Project[] = [
         "Guidelines for coding conventions and art integration"
       ],
       results: "Helped team members learn Unity basics, experience collaborative development, and understand project organization within a small game project.",
-      gallery: [
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400"
-      ]
+      gallery: []
     }
   },
   {
     id: 7,
     title: "School Bot 1.0",
     description: "School Bot 1.0 is a custom Discord bot designed to help students stay organized with their academic responsibilities, especially during remote learning. Built using Python and discord.py, it offers automatic user registration, calendar integration, and persistent user data management. The bot was created for Howell High School during the pandemic to help educational communities and study groups manage schedules and homework.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["Python", "Discord Bot", "Academic", "Automation", "Calendar", "CSV"],
     icons: ["Python", "Discord", "CSV", "Calendar"],
     category: "Web Application",
@@ -177,18 +169,14 @@ export const allProjects: Project[] = [
         "Planned features: homework reminders, event listing, scheduled reminders, and a web dashboard"
       ],
       results: "Adopted by a high school community to improve student organization and information flow during the pandemic. Provided a foundation for School Bot 2.0 with feedback-driven improvements.",
-      gallery: [
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400"
-      ]
+      gallery: []
     }
   },
   {
     id: 8,
     title: "Portfolio Website",
     description: "A personal portfolio website built to showcase my projects, skills, and experiences as a developer.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["TypeScript", "React", "Next.js", "UI/UX", "Web Development"],
     icons: ["TypeScript", "React", "Next.js", "Tailwind"],
     category: "Web Application",
@@ -206,16 +194,14 @@ export const allProjects: Project[] = [
         "Mobile-friendly design"
       ],
       results: "Successfully launched a comprehensive and visually appealing portfolio website, improving my professional web presence and making it easier for recruiters and collaborators to explore my work.",
-      gallery: [
-        
-      ]
+      gallery: []
     }
   },
   {
     id: 9,
     title: "Fortnite Detector",
     description: "A Python script that alerts a Discord channel when your health in Fortnite decreases by monitoring the game screen.",
-    image: "/api/placeholder/600/400",
+    image: "",
     tags: ["Python", "Discord Bot", "Computer Vision", "Fortnite", "Automation"],
     icons: ["Python", "Discord", "OpenCV"],
     category: "Automation",
@@ -229,11 +215,7 @@ export const allProjects: Project[] = [
         "Async event loop for efficient background checks"
       ],
       results: "Enabled real-time alerts for teammates, improving awareness and teamwork during gameplay.",
-      gallery: [
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400",
-        "/api/placeholder/600/400"
-      ]
+      gallery: []
     }
   }
 ];

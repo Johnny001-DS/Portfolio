@@ -72,7 +72,7 @@ export const clubs = [
         "Collaborated on developing the website architecture",
         "Designed and implemented the user interface",
         "Created database schemas for storing global opportunity and user data",
-        "Teaching new members about full-stack development",
+        "Mentoring 80+ students in full-stack development and project management principles through workshops and one-on-one sessions",
       ],
       skills: [
         "Web Development",
