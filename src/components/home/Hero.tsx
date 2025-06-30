@@ -1,5 +1,4 @@
 import { ArrowDownCircle } from "lucide-react";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const Hero: React.FC = () => {
@@ -115,12 +114,10 @@ const Hero: React.FC = () => {
                 <div className="absolute -bottom-6 -right-6 w-12 h-12 border-b-4 border-r-4 border-purple-600 dark:border-purple-400 rounded-br-lg"></div>
                 
                 <div className="relative w-64 h-64 md:w-80 md:h-80 bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform rotate-3 hover:rotate-0 transition-all duration-500">
-                  <Image 
-                  src="/app/images/misc/Headshot.jpg"
-                  alt="James Khadan" 
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-2xl"
+                  <img 
+                    src="/app/images/misc/Headshot.jpg"
+                    alt="James Khadan" 
+                    className="w-full h-full object-cover rounded-2xl"
                   />
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-blue-600 dark:bg-blue-500 rounded-lg shadow-lg transform -rotate-6"></div>
