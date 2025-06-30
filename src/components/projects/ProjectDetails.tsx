@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ProjectDetailsProps } from "@/types";
-import { X, ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project, onClose }) => {
     const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'gallery'>('overview');

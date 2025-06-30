@@ -1,15 +1,5 @@
 import { ArrowRight } from "lucide-react";
-
-interface ClubCardProps {
-  club: {
-    name: string;
-    role: string;
-    period: string;
-    description: string;
-    image: string;
-  };
-  onSelect: (club: any) => void;
-}
+import { ClubCardProps } from "@/types";
 
 const ClubCard: React.FC<ClubCardProps> = ({ club, onSelect }) => (
   <div 

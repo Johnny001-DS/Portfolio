@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   Layout, Server, Code, Globe, Database, GitBranch, 
   Box, Terminal, Cloud, FileCode, PenTool, Repeat,
-  Cpu, Coffee, CheckCircle
+  CheckCircle
 } from 'lucide-react';
 
 interface SkillWithIconProps {

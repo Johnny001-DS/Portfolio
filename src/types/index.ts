@@ -115,3 +115,39 @@ export interface AllProjectsCardProps {
     project: Project;
     onSelect: (project: Project) => void;
 }
+
+export interface Club {
+    name: string;
+    role: string;
+    period: string;
+    location: string;
+    description: string;
+    image: string;
+    details: {
+        activities: string[];
+        skills: string[];
+        achievements: string[];
+        gallery: string[];
+    };
+}
+
+export interface Course {
+    title: string;
+    description: string;
+    skillsLearned: string[];
+}
+
+export interface ClubCardProps {
+    club: Club;
+    onSelect: (club: Club) => void;
+}
+
+export interface ClubDetailsProps {
+    club: Club | null;
+    onClose: () => void;
+}
+
+export interface CourseDetailsProps {
+    course: Course | null;
+    onClose: () => void;
+}

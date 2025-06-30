@@ -21,7 +21,7 @@ const About: React.FC = () => {
                     <div className="relative bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl">
                         <h3 className="text-2xl font-bold mb-4">Who I Am</h3>
                         <p className="text-gray-700 dark:text-gray-300 mb-4">
-                        Hi there! I'm James, a computer science student at Northeastern University with a lifelong curiosity for how things work, especially in the world of tech. From building computers in my early years to exploring advanced programming concepts today, I'm passionate about understanding how technology can make a tangible impact. This passion has led me to some exciting projects, like creating tools to help my community and even founding my own tech venture to support local organizations.
+                        Hi there! I&apos;m James, a computer science student at Northeastern University with a lifelong curiosity for how things work, especially in the world of tech. From building computers in my early years to exploring advanced programming concepts today, I&apos;m passionate about understanding how technology can make a tangible impact. This passion has led me to some exciting projects, like creating tools to help my community and even founding my own tech venture to support local organizations.
                         </p>
                         <p className="text-gray-700 dark:text-gray-300 mb-4">
                         Beyond the screen, you can often find me planning my next travel adventure, capturing moments through photography, enjoying a good cup of tea, getting lost in a movie, or hitting the trails for a hike.
@@ -52,7 +52,7 @@ const About: React.FC = () => {
                     <ul className="space-y-2">
                         <li className="flex items-start">
                             <Star className="text-blue-600 dark:text-blue-400 mt-1 mr-2" size={16} />
-                            <span className="text-gray-700 dark:text-gray-300">Dean's List</span>
+                            <span className="text-gray-700 dark:text-gray-300">Dean&apos;s List</span>
                         </li>
                         <li className="flex items-start">
                             <Star className="text-blue-600 dark:text-blue-400 mt-1 mr-2" size={16} />

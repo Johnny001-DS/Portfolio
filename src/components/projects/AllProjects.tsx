@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useTheme } from 'next-themes';
 import { AllProjectsProps } from '@/types/index';
 import { allProjects } from '@/data/projects';
 import { ArrowLeft, Search, Code } from 'lucide-react';
@@ -9,7 +8,6 @@ import FilterButton from '@/components/ui/FilterButton';
 const AllProjects: React.FC<AllProjectsProps> = ({ setActivePage, onProjectSelect }) => {
     const [searchQuery, setSearchQuery] = useState<string>('');
     const [activeFilter, setActiveFilter] = useState<string>('All');
-    const { theme } = useTheme();
     
     const filters = ['All', 'Web Application', 'IT', 'Game Development'];
     
@@ -77,7 +75,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ setActivePage, onProjectSelec
               <Code size={48} className="mx-auto text-gray-400 mb-4" />
               <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">No projects found</h3>
               <p className="text-gray-500 dark:text-gray-400">
-                Try adjusting your search or filter to find what you're looking for.
+                Try adjusting your search or filter to find what you&apos;re looking for.
               </p>
             </div>
           )}

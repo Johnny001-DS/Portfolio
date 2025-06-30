@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, ChevronRight } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { ExperienceDetailsProps } from '@/types';
 import { MapPin, Briefcase, Code, Award, MessageSquare } from 'lucide-react';
 import { X } from 'lucide-react';
@@ -112,7 +112,7 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({ experience, onClo
                       <h3 className="text-lg font-semibold">Testimonial</h3>
                     </div>
                     <blockquote className="text-gray-700 dark:text-gray-300 italic">
-                      "{experience.details.testimonial.text}"
+                      &quot;{experience.details.testimonial.text}&quot;
                     </blockquote>
                     <div className="mt-2 text-right text-gray-600 dark:text-gray-400">
                       — {experience.details.testimonial.author}

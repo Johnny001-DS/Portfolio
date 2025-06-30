@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
             <div className="md:w-1/2 mb-12 md:mb-0">
               <div className="relative">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-                  <span className="block">Hi, I'm</span>
+                  <span className="block">Hi, I&apos;m</span>
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                     James Khadan
                   </span>
@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
                 </div>
                 
                 <p className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-                  Computer Science student at Northeastern University currently working as a full-stack engineer. I'm passionate about creating intuitive and
+                  Computer Science student at Northeastern University currently working as a full-stack engineer. I&apos;m passionate about creating intuitive and
                   scalable applications.
                 </p>
                 

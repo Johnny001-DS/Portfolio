@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Users, Calendar, MapPin, CheckCircle, Briefcase, Code, Award, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, Calendar, MapPin, Briefcase, Code, Award, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ClubDetailsProps {
   club: {
@@ -185,7 +185,7 @@ const ClubDetails: React.FC<ClubDetailsProps> = ({ club, onClose }) => {
                       <h3 className="text-lg font-semibold">Testimonial</h3>
                     </div>
                     <blockquote className="text-gray-700 dark:text-gray-300 italic">
-                      "{club.details.testimonial.text}"
+                      &quot;{club.details.testimonial.text}&quot;
                     </blockquote>
                     <div className="mt-2 text-right text-gray-600 dark:text-gray-400">
                       — {club.details.testimonial.author}

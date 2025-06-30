@@ -6,6 +6,7 @@ import ClubDetails from '@/components/clubs/ClubDetails';
 import CourseDetails from '@/components/courses/CourseDetails';
 import { clubs } from '@/data/skills';
 import { relevantCourses } from '@/data/skills';
+import { Club, Course } from '@/types';
 
 const Skills: React.FC = () => {
     const languages = ["Python", "TypeScript", "Java", "C#", "C++", "C", "Rust", "SQL"];
@@ -14,8 +15,8 @@ const Skills: React.FC = () => {
     
     
 
-    const [selectedClub, setSelectedClub] = useState<any>(null);
-    const [selectedCourse, setSelectedCourse] = useState<any>(null);
+    const [selectedClub, setSelectedClub] = useState<Club | null>(null);
+    const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
     return (
         <section id="skills" className="py-24 bg-white dark:bg-gray-900">
@@ -88,7 +89,7 @@ const Skills: React.FC = () => {
                 </h3>
                 <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-2"></div>
                 <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-4">
-                  I'm actively engaging with student organizations to build skills and contribute to the community
+                  I&apos;m actively engaging with student organizations to build skills and contribute to the community
                 </p>
               </div>
               

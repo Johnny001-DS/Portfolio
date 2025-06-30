@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Heart } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Footer: React.FC = () => {
     return (
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               </div>
                 <p className="mt-2 text-gray-400 max-w-md">
                 Passionate about building impactful software solutions.<br />
-                Let's connect and create something amazing together!
+                Let&apos;s connect and create something amazing together!
                 </p>
             </div>
             

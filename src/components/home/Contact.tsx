@@ -1,35 +1,7 @@
-import { useState } from 'react';
-import { Mail, Linkedin, Github, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone, MapPin } from 'lucide-react';
 import ContactMethod from '@/components/ui/ContactMethod';
 
 const Contact: React.FC = () => {
-    interface FormState {
-      name: string;
-      email: string;
-      subject: string;
-      message: string;
-    }
-  
-    const [formState, setFormState] = useState<FormState>({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setFormState({
-        ...formState,
-        [e.target.id]: e.target.value
-      });
-    };
-    
-    const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
-      // Form submission logic would go here
-      alert('Form submitted! (This would connect to a backend in a real implementation)');
-    };
-    
     return (
       <section id="contact" className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,8 +13,8 @@ const Contact: React.FC = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              I'm currently open to new opportunities and collaborations. 
-              Whether you have a question or just want to say hi, I'll get back to you as soon as possible!
+              I&apos;m currently open to new opportunities and collaborations. 
+              Whether you have a question or just want to say hi, I&apos;ll get back to you as soon as possible!
             </p>
           </div>
           
