@@ -11,7 +11,7 @@ import { Club, Course } from '@/types';
 const Skills: React.FC = () => {
     const languages = ["Python", "TypeScript", "Java", "C#", "C++", "C", "Rust", "SQL"];
     const frameworks = ["RESTful", "React", "Next.js", "NumPy", "Pandas", "PyTorch"];
-    const tools = ["Git", "Kubernetes", "Docker", "AWS", "Linux", "Ansible", "RedHat OpenShift", "Azure", "Jenkins"];
+    const tools = ["Git", "Kubernetes", "Docker", "AWS", "Linux", "Ansible", "RedHat OpenShift", "Azure", "Jenkins", "PowerBI"];
     
     
 
