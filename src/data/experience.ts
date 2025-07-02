@@ -105,14 +105,15 @@ export const experiences: Experience[] =
     position: "AWS Academy Student",
     period: "May 2024 - June 2024",
     location: "Seattle, WA",
-    description: "Design and develop websites for small businesses and organizations. Focus on responsive design and accessibility.",
+    description: "Learned foundational cloud computing concepts and gained hands-on experience with AWS tools and services.",
     details: {
       responsibilities: [
-        "Designed and developed custom websites for diverse clients",
-        "Implemented responsive designs that work across all device sizes",
-        "Ensured accessibility compliance for all web projects",
-        "Managed client relationships and project timelines",
-        "Provided ongoing maintenance and support for completed sites"
+        "Understanding core cloud computing concepts and AWS service offerings.",
+        "Learning to set up and manage scalable cloud infrastructure using AWS tools.",
+        "Configuring Virtual Private Clouds (VPCs) and subnets for secure networking.",
+        "Researching Auto Scaling groups to optimize application performance during traffic surges.",
+        "Deploying and managing EC2 instances and RDS databases for high availability.",
+        "Exploring best practices for cloud security and cost optimization."
       ],
       technologies: ["AWS", "Networking", "TCP", "Next.js", "WordPress"],
       achievements: [
@@ -121,7 +122,7 @@ export const experiences: Experience[] =
         "Created a Virtual Private Cloud with 4 subnets distributed across 2 availability zones, configuring Elastic Load Balancing to manage up to 3 EC2 instances."
       ],
       projects: [
-        "Student Data Management System: Developed a web application using and AWS services to manage mock student data, including registration, attendance, and grades.",
+        "Student Data Management System: Developed a web application using AWS services to manage mock student data, including registration, attendance, and grades."
       ]
     } 
   },
